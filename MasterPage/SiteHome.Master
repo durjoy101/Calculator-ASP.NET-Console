@@ -1,0 +1,296 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteHome.master.cs" Inherits="WebApplication2.MasterPage.SiteHome" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>My Second WebSite</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="../CSS/custom.css" rel="stylesheet" />
+    <script>
+        const scrollHandler = () => {
+            const scrollPosition = window.scrollY;
+            if (scrollPosition > 100) {
+                topper.style.display = 'block';
+            } else {
+                topper.style.display = 'none';
+            }
+        }
+
+        document.addEventListener('scroll', scrollHandler);
+        window.onload = scrollHandler;
+    </script>
+    <style>
+
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <section>
+            <!--navbar-->
+        <nav class="navbar navbar-expand-lg bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img class="img-fluid logo" src="image/logo.jpg" alt="Alternate Text" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#top">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about_us">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a>
+                            
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--navbar end-->
+        <!--slider-->
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <img src="image/demo1.jpg" class="d-block w-100" alt="...">
+
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="image/demo2.jpg" class="d-block w-100" alt="...">
+
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="image/demo3.jpg" class="d-block w-100" alt="...">
+
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!--slider end-->
+        </section>
+        <!--About us-->
+    <section id="about_us">
+        <div class="container">
+            <!--about heading-->
+            <!--<div class="row mt-4">
+                <div class="col text-center">
+                    <h1>About Us</h1>
+                    <p>It is a long established fact that a reader will be distracted by the readable content</p>
+                </div>
+            </div>-->
+            <!--/about heading-->
+            <!--about us content-->
+            <div class="row py-4 d-flex flex-row align-items-center">
+
+                <div class="col-md-4">
+                    <div class="about_us_image text-center">
+                        <img class="img-fluid" src="image/demo1.jpg" alt="Alternate Text" />
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <h1>How We Are</h1>
+                    <p style="text-align:justify;">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                    <button class="btn btn-primary">Show Content...</button>
+                </div>
+
+            </div>
+            <!--/about us content-->
+        </div>
+    </section>
+    <!--/About us-->
+    <!--Blog -->
+    <section id="blog" class="bg-info">
+        <div class="container">
+            <div class="row py-4">
+                <div class="col-12 section_title text-center">
+                    <h1>Latest Blog Posts</h1>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                        <div class="card h-100">
+                            <img src="image/cardimg1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text" style="min-height:100px;">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="col-md-4 col-sm-12">
+                        <div class="card h-100">
+                            <img src="image/cardimg2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text" style="min-height:100px;">This is a short card.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card h-100">
+                            <img src="image/cardimg3.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body ">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text" style="min-height:100px;">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <!--/Blog -->
+    <!--Contact us-->
+    <section id="contact">
+        <div class="container-fluid bg-secondary pt-4">
+            <h1 class="text-center">Get In Touch</h1>
+            <p class="text-center">It is a long established fact that a reader will be distracted by the readable content</p>
+            <div class="row d-flex flex-row align-items-center">
+                <div class="col-md-6 p-5">
+                    <h3>Message Us</h3>
+                   
+                        <div class="form-group py-2">
+                            <label for="exampleInputEmail1">Name</label>
+                            <input type="text" class="form-control mt-2" id="Name" aria-describedby="Name" placeholder="Enter Name">
+
+                        </div>
+                        <div class="form-group py-2">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control mt-2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+
+                        </div>
+                        <div class="form-group py-2">
+                            <label for="exampleInputPassword1">Message</label>
+                            <textarea class="form-control mt-2" id="message" placeholder="Writer your message" cols="30" rows="5"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary mt-2 col-12">Submit</button>
+                   
+                </div>
+
+                <div class="col-md-6 p-5 ">
+                    <div class="row d-flex flex-row align-items-center" >
+                        <div class="col-md-1"><h3 class="contact_head">Contact Us</h3></div>
+                        <div class="col-md-11">
+                            <div><i class="fa-solid fa-envelope mb-3"></i><span class="ml-2">demosite@gmail.com</span></div>
+                            <div><i class="fa-solid fa-phone-flip mb-3"></i><span class="ml-2">012345678</span></div>
+                            <div><i class="fa-solid fa-link mb-3"></i><span class="ml-2">www.demosites.com</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/Contact us-->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <!--footer top-->
+    <section id="fotter_top" class="footer_top py-5 bg-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>About Us</h4>
+                    <p>The most list group is an unorderd list with list items and the</p>
+                    <img src="image/logo2.jpg" width="150" alt="Alternate Text" />
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Suscribe</h4>
+                   
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary" type="button">Button</button>
+                            </div>
+                        </div>
+                        <div class="px-5 social_link d-flex flex-row justify-content-between">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-google"></i></a>
+                        </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/footer top-->
+    <!--topper-->
+    <div id="topper">
+        <a href="#top" class="top_button"> <i class="fas fa-arrow-alt-circle-up"></i></a>
+    </div>
+    <!--/topper-->
+    <!--footer-->
+    <section id="footer">
+        <div class="container-fluid bg-dark text-center p-3">
+            <span class="text-primary">&copy;</span> <a class="text-decoration-none" href="https://www.google.com/" target="_blank">Copyright || 2022</a>
+        </div>
+    </section>
+    <!--/footer-->
+        <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login Page</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                        <label>Username/Email</label>
+                        <input class="form-control" type="text" name="name" value="" placeholder="Enter Username/Email" />
+                        <br />
+                        <label>Password</label>
+                        <input class="form-control" type="password" name="name" value="" placeholder="Enter Password" />
+                        <br />
+                        <button type="submit" class="btn btn-primary col-12">Submit</button>
+                   
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--/modal-->
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
+

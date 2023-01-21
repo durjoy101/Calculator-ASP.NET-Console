@@ -1,0 +1,78 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    padding-top: 59px;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --primary_color: #e59551;
+    --secondary_color: #4f8e34;
+    --light: #fec095;
+    --white: #fff;
+    --dark: #000;
+    --fa_size: 25px;
+}
+
+.carousel-inner {
+    height: 90vh !important;
+}
+
+img.logo {
+    height: 30px;
+    width: auto;
+}
+
+.ml-2 {
+    margin-left: 5px;
+}
+
+#topper {
+    position: fixed;
+    right: 40px;
+    bottom: 48px;
+}
+
+a.top_button {
+    color: var(--primary_color) !important;
+    font-size: 40px;
+}
+
+.social_link a {
+    font-size: var(--fa_size);
+}
+
+
+.navbar {
+    background-color: var(--primary_color) !important;
+}
+
+h3.contact_head {
+    writing-mode: vertical-lr;
+}
+
+img.card-img-top {
+    height: 300px;
+}
+
+input.btn.btn-primary, 
+input.btn.btn-danger {
+    width: 80px;
+    height: 60px;
+    border-radius: 0px;
+}
+
+input#ContentPlaceHolder1_TextBox1 {
+    background-color: #28282877;
+    border-radius: 0px;
+    font-size: 30px;
+    padding: 15px;
+    color: #ffff;
+    text-align: right;
+}
